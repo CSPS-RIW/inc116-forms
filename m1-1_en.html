@@ -69,6 +69,13 @@
                 <div class="form-component"
                     v-scope="textInputVal({question: 'Explain why you are interested in taking Advancing the Conversation on Systemic Racism.', isRequired: true,  uniqueId: '2'})">
                 </div>
+
+                <div class="print-container">
+                    <button class="print-answers" title="Dowload content"
+                        data-toggle="tooltip">
+                        <span class="wb-inv">Download Content</span>
+                    </button>
+                </div>
                 <!-- Content ends here -->
             </main>
         </div>
@@ -91,6 +98,13 @@
     <!-- inject:js -->
     <script src="assets/js/csps-app.js" type="module"></script>
     <!-- endinject -->
+    <script>
+        let printBtn = document.querySelector('.print-answers');
+        let printCont = document.querySelector('.print-container');
+        printBtn.addEventListener('click', () => {
+            window.print();
+        })
+    </script>
 
 </body>
 
